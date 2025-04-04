@@ -90,7 +90,7 @@ class TicTacToeGame {
                 return;
             }
 
-            this.playerMark = (this.playerMark === 'X') ? 'O' : 'X';
+            this.playerMark = (this.playerMark == 'X') ? 'O' : 'X';
             this.uiManager.displayMessage(`${this.playerMark} plays next!`, 'white', 'black');
             if (this.playerMark === 'O' && this.gameMode === 'computer') {
                 this.makeComputerMove();
@@ -154,21 +154,19 @@ class TicTacToeGame {
         // console.log('this.lastmove', lastMove)
 
         let result = ((lastMove.index - 0) % this.boardSize); // 0,1,2
-        // console.log('cols', cols)
 
         let colCells = [];
+        let colValues = []; 
         for (let row = 0; row < this.boardSize; row++) {
-            colCells.push(cells[result * this.boardSize + result])
+            colCells.push(cells[row * this.boardSize + result]);
+            colValues.push(cells[row * this.boardSize + result].textContent); // Populate colValues
         }
 
         if (this.allSame(colValues)) {
             this.uiManager.winningCells(colCells);
             return colValues[0];
         }
-
     }
-
-
 
     checkWin() {
         this.uiManager.clearWinningCells(Array.from(document.querySelectorAll('#gameBoard button')));
