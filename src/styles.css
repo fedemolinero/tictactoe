@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.game-board {
+  display: grid;
+  gap: 5px;
+  margin: 1rem auto;
+  max-width: 90%;
+  height: 65vh;
+}
+
+.game-board button {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  cursor: pointer;
+  user-select: none;
+  color: #410606;
+  border: 0.1rem solid #410606;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.game-board button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.game-board button:disabled {
+  cursor: not-allowed;
+  background-color: #d0d0d0;
+}
+
+.game-board button:focus {
+  outline: 2px solid #410606;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-end;
+  color: #410606;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.messager {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0 18px;
+  line-height: 8vh;
+  text-align: center;
+  text-decoration: none;
+  width: 90%;
+}
+
+.button-start {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-start:hover {
+  background-color: #fff;
+}
+
+.button-start:active {
+  box-shadow: #410606 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.game-options-size,
+.game-options-mode,
+.game-options-difficulty {
+  margin: 1.5vh;
+  background-color: #fbeee0;
+  border: 2px solid #410606;
+  box-shadow: #410606 4px 4px 0 0;
+  color: #410606;
+  padding: 1vh;
+  font-weight: 600;
+}
+
+.selectGameMode,
+.selectDifficulty {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  color: #422800;
+  padding: 1vh;
+  font-weight: 600;
+}
+
+.inputSize {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  color: #422800;
+  padding: 1vh;
+  font-weight: 600;
+}

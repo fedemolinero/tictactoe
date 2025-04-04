@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="app">
+    <div id="messager" class="messager">Welcome To Tic Tac Toe, select options and play!</div>
+
+    <div class="container">
+      <div class="game-options-size">
+        <label for="boardSize">Board Size:</label>
+        <input type="number" class="inputSize" id="boardSize" min="3" max="10" value="3" aria-required="true"
+          aria-label="Board size">
+      </div>
+
+      <div class="game-options-mode">
+        <label for="gameMode">Game Mode:</label>
+        <select class="selectGameMode" id="gameMode" aria-required="true" aria-label="Game mode">
+          <option value="player">Player vs Player</option>
+          <option value="computer">Player vs IA</option>
+        </select>
+      </div>
+
+      <div class="game-options-difficulty">
+        <label for="difficulty">Difficulty:</label>
+        <select class="selectDifficulty" id="difficulty" aria-required="true" aria-label="Difficulty">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="startGame" class="button-start" aria-label="Start game">START</button>
+    <button id="undoLast" class="button-start" aria-label="Undo last play">UNDO LAST</button>
+
+    <div id="gameBoard" class="game-board" aria-label="Tic Tac Toe board"></div>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+
+</html>
